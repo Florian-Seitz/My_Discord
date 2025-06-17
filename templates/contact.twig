@@ -1,0 +1,31 @@
+{% extends "base.twig" %}
+
+{% block main %}
+	<!-- Contact -->
+	<h2 class="title">{{ texte.h2[0] }}</h2>
+	<section class="contact">
+		<div>
+			<h3>{{ texte.h3[0] }}</h3>
+			<p>{{ texte.p[0] }}</p>
+		</div>
+		<div>
+			<h3>{{ texte.h3[1] }}</h3>
+			<p>{{ texte.p[1] }}</p>
+		</div>
+		<div>
+			<h3>{{ texte.h3[2] }}</h3>
+			<p>{{ texte.p[2] }}</p>
+		</div>
+	</section>
+
+
+	<!-- Formulaire -->
+	<h2 class="title">{{ texte.h2[1] }}</h2>
+	<form action="#" method="post">
+		{% for label in texte.labels %}
+		<label for="{{ label.for }}">{{ label.name }} :</label>
+		<input type="{{ label.type }}" id="{{ label.for }}" name="{{ label.for }}" required>
+		{% endfor %}
+		<button type="submit">{{ texte.button }}</button>
+	</form>
+{% endblock main %}

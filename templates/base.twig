@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Discordo |
+			{{ titre|title }}</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+		<link
+		rel="shortcut icon" type="Image/png" href="images/discord-logo.png">
+		<!-- Pour installer la Font Oxanium & Oswald -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+	</head>
+
+	<body>
+		<aside>
+			<div class="servlist">
+				<nav>
+					<a href="index.php" class="{{ accueiltype }}">
+						<div><span></span></div>
+						<i class="bi bi-discord mp"></i>
+					</a>
+
+					<div class="headsepa"></div>
+
+					{% for servlist in listeserveurs %}
+						<a href="{{ servlist[0] }}.php" class="{{ servlist[3] }}">
+							<div><span></span></div>
+							<img src="images/{{ servlist[1] }}.png" alt="{{ servlist[2] }}">
+						</a>
+					{% endfor %}
+
+					<a href="">
+						<div><span></span></div>
+						<i class="bi bi-plus"></i>
+					</a>
+					<a href="">
+						<div><span></span></div>
+						<i class="bi bi-download"></i>
+					</a>
+				</nav>
+				<footer>
+					<a href="">
+						<div><span></span></div>
+						<i class="bi bi-compass-fill"></i>
+					</a>
+				</footer>
+			</div>
+
+			<section>
+				<header>header</header>
+				<nav>
+					salons serveur
+				</nav>
+				<footer>footer</footer>
+			</section>
+		</aside>
+		<main>
+			{% block main %}
+				<h2>Page classique</h2>
+			{% endblock %}
+		</main>
+	</body>
+</html>

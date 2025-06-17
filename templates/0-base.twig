@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{% if lang == 'fr' %}
+	<title>{{ titre|title }} | Formule 1</title>
+	{% elseif lang == 'en' %}
+	<title>{{ titre|title }} | Formula 1</title>
+	{% endif %}
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/{{ style }}.css">	
+
+	<link rel="shortcut icon" type="Image/png" href="images/logos/f1-icon.png">
+	<!-- Pour installer la Font Oxanium & Oswald -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Oxanium:wght@200..800&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		{% block header %}
+		{% if lang == 'fr' %}
+		<div>
+			<div>
+				<img src="images/logos/f1-logo.png" alt="">
+				<h1>FORMULE 1</h1>
+			</div>
+
+			<div class="langchoice">
+				<a href="#"><img src="images/francais.jpg" alt="français">- FR</a>
+				<ul>
+					<li><a href="{{ langpage[0] }}.php"><img src="images/francais.jpg" alt="Français"> - Français</a>
+					</li>
+					<li><a href="{{ langpage[1] }}.php"><img src="images/english.jpg" alt="english"> - English</a></li>
+				</ul>
+			</div>
+		</div>
+		<nav class="main-nav">
+			<ul>
+				<li><a href="index.php">Accueil</a></li>
+				<li><a href="page1-fr.php">Equipes</a></li>
+				<li><a href="page2-fr.php">Pilotes</a></li>
+				<li><a href="page3-fr.php">Evolutions</a></li>
+				<li><a href="propos-fr.php">A propos</a></li>
+				<li><a href="contact-fr.php">Contact</a></li>
+			</ul>
+		</nav>
+		<nav class="sous-nav">
+			<ul>
+				{% for idlist in categories %}
+				<li>
+					<a href="#{{ idlist.ids[0] }}">{{ idlist.ids[0] }}</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</nav>
+
+		{% elseif lang == 'en' %}
+		<div>
+			<div>
+				<img src="images/logos/f1-logo.png" alt="">
+				<h1>FORMULA 1</h1>
+			</div>
+
+			<div class="langchoice">
+				<a href="#"><img src="images/english.jpg" alt="English">- EN</a>
+				<ul>
+					<li><a href="{{ langpage[0] }}.php"><img src="images/francais.jpg" alt="français"> - Français</a>
+					</li>
+					<li><a href="{{ langpage[1] }}.php"><img src="images/english.jpg" alt="english"> - English</a></li>
+				</ul>
+			</div>
+		</div>
+		<nav class="main-nav">
+			<ul>
+				<li><a href="home-en.php">Home</a></li>
+				<li><a href="page1-en.php">Teams</a></li>
+				<li><a href="page2-en.php">Drivers</a></li>
+				<li><a href="page3-en.php">Evolutions</a></li>
+				<li><a href="propos-en.php">About</a></li>
+				<li><a href="contact-en.php">Contact</a></li>
+			</ul>
+		</nav>
+		<nav class="sous-nav">
+			<ul>
+				{% for idlist in categories %}
+				<li>
+					<a href="#{{ idlist.ids[0] }}">{{ idlist.ids[0] }}</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</nav>
+		{% endif %}
+		{% endblock header %}
+	</header>
+
+	<main>
+		{% block main %}
+		<div>
+			<p>Main de la page</p>
+		</div>
+		{% endblock %}
+	</main>
+
+	<footer>
+		{% block footer %}
+		{% if lang == 'fr' %}
+		<div>
+			<p>&copy; 2025 Florian SEITZ. Tous droits réservés.</p>
+		</div>
+		<div class="sitemap">
+			<h3>Plan du site</h3>
+			<ul>
+				<li><a href="index.php">Accueil</a></li>
+				<li><a href="page1-fr.php">Equipes</a></li>
+				<li><a href="page2-fr.php">Pilotes</a></li>
+				<li><a href="page3-fr.php">Evolutions</a></li>
+				<li><a href="propos-fr.php">À propos</a></li>
+				<li><a href="contact-fr.php">Contact</a></li>
+			</ul>
+		</div>
+		{% elseif lang == 'en' %}
+		<div>
+			<p>&copy; 2025 Florian Seitz. All rights reserved.</p>
+		</div>
+		<div class="sitemap">
+			<h3>Site plan</h3>
+			<ul>
+				<li><a href="home-en.php">Home</a></li>
+				<li><a href="page1-en.php">Teams</a></li>
+				<li><a href="page2-en.php">Drivers</a></li>
+				<li><a href="page3-en.php">Evolutions</a></li>
+				<li><a href="propos-en.php">About</a></li>
+				<li><a href="contact-en.php">Contact</a></li>
+			</ul>
+		</div>
+		{% endif %}
+		{% endblock footer %}
+	</footer>
+</body>
+
+</html>

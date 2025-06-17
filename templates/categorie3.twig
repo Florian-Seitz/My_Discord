@@ -1,0 +1,33 @@
+{% extends "base.twig" %}
+
+{% block main %}
+<!-- Format 4 -->
+<div class="asidediv">
+    <section>
+        <h2 class="title">{{ texte.h2[0] }}</h2>
+        {% for evolution in categories %}
+            <article class="evolution" id="{{ evolution.ids[0] }}">
+                <h2>{{ evolution.date }}</h2>
+                <img src="{{ evolution.monoplace[0] }}" alt="{{ evolution.monoplace[1] }}">
+                <p>{{ texte.p }} : {{ evolution.moteur }}</p>
+                <div>
+                    <div>
+                        <h3>{{ texte.h3 }} {{ evolution.date }}</h3>
+                        <p>{{ evolution.description }}</p>
+                    </div>
+                    <img src="{{ evolution.image[0] }}" alt="{{ evolution.image[1] }}">
+                </div>
+            </article>
+        {% endfor %}
+    </section>
+    <aside>
+        <h2>{{ texte.h2[1] }}</h2>
+        <ul>
+            <li><a href="https://www.formula1.com/" target="_blank">{{ texte.li[0] }}</a></li>
+            <li><a href="https://fr.wikipedia.org/wiki/Formule_1" target="_blank">{{ texte.li[1] }}</a></li>
+        </ul>
+    </aside>
+</div>
+
+{% endblock main %}
+

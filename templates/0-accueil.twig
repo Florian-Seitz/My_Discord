@@ -1,0 +1,51 @@
+{% extends "base.twig" %}
+
+{% block main %}
+	<!-- Bannière -->
+	<section class="banner">
+		<div>
+			<h2> {{ texte.banner[0] }} </h2>
+
+			{% if lang == 'fr' %}
+			<a href="page1-fr.php"> {{ texte.banner[1] }} </a>
+			{% elseif lang == 'en' %}
+			<a href="page1-en.php"> {{ texte.banner[1] }} </a>
+			{% endif %}
+		</div>
+	</section>
+
+	<!-- Paragraphe -->
+	<section class="histoire">
+		<h2> {{ texte.h2[0] }} </h2>
+		<p> {{ texte.p[0] }} </p>
+	</section>
+
+	<!-- Classement -->
+	<section class="classement">
+		<h2> {{ texte.h2[1] }} </h2>
+		<div>
+			<div>
+				<h3> {{ texte.h3[0] }} </h3>
+				<p> {{ texte.p[1] }} </p>
+			</div>
+			<div>
+				<h3> {{ texte.h3[1] }} </h3>
+				<p> {{ texte.p[2] }} </p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Citation -->
+	<section class="citation">
+		<h2> {{ texte.h2[2] }} </h2>
+		{% for cita in texte.citation %}
+			<div>
+				<blockquote>
+					<p>{{ cita.p }}</p>
+				</blockquote>
+				<cite>{{ cita.cite }}</cite>
+			</div>
+		{% endfor %}
+	</section>
+
+{% endblock main %}

@@ -1,0 +1,58 @@
+{% extends "base.twig" %}
+
+{% block main %}
+<!-- Format 1 -->
+<div>
+	<h2 class="title">{{ texte.h2 }}</h2>
+	{% for equipe in categories %}
+		<article class="equipe" id="{{ equipe.ids[0] }}">
+			<div class="parts">
+				<img src="{{ equipe.logo[0] }}" alt="{{ equipe.logo[1] }}">
+				<h2>{{ equipe.titre }}</h2>
+				<p>{{ equipe.description }}</p>
+				<div class="div-bg">
+					<h3>{{ texte.h3[0] }}</h3>
+					<ul>
+						<li><strong>{{ texte.li[0] }} :</strong> {{ equipe.teamprincipal }}</li>
+						<li><strong>{{ texte.li[1] }} :</strong> {{ equipe.champion }}</li>
+						<li><strong>{{ texte.li[2] }} :</strong> {{ equipe.position }}</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="parts">
+				<div>
+					<div>
+						<h3>{{ texte.h3[1] }}</h3>
+						<ul>
+							<li><strong>{{ texte.li[3] }} :</strong> {{ equipe.chassis }}</li>
+							<li><strong>{{ texte.li[4] }} :</strong> {{ equipe.moteur }}</li>
+						</ul>
+					</div>
+					
+					<img src="{{ equipe.monoplace[0] }}" alt="{{ equipe.monoplace[1] }}">
+				</div>
+				
+				<div>
+					<h3>{{ texte.h3[2] }}</h3>
+					<ul>
+						<li><a href="{{ texte.lien }}.php#{{ equipe.ids[1] }}">{{ equipe.pilote[0] }}</a></li>
+						<li><a href="{{ texte.lien }}.php#{{ equipe.ids[2] }}">{{ equipe.pilote[1] }}</a></li>
+					</ul>
+				</div>
+	
+				<h3>{{ texte.h3[3] }}</h3>
+				<table>
+					{% for championnat in equipe.championnats %}
+						<tr>
+							<td>{{ championnat.annee }}</td>
+							<td>{{ championnat.position }}</td>
+							<td>{{ championnat.point }}pts</td>
+						</tr>
+					{% endfor %}
+				</table>
+			</div>
+		</article>
+	{% endfor %}
+</div>
+{% endblock main %}

@@ -1,0 +1,39 @@
+{% extends "base.twig" %}
+
+{% block main %}
+<!-- Format 3 -->
+<div>
+	<h2 class="pilotitle">{{ texte.h2 }}</h2>
+	{% for pilote in categories %}
+	<article class="pilote" id="{{ pilote.ids[0] }}">
+		<img src="{{ pilote.image[0] }}" alt="{{ pilote.image[1] }}">
+		<h2>{{ pilote.nom }}</h2>
+		<div>
+			<p>{{ pilote.numero }}</p>
+			<a href="{{ texte.lien }}.php#{{ pilote.ids[1] }}">{{ pilote.equipe }}</a>
+		</div>
+        <div class="div-bg">
+            <h3>{{ texte.h3[0] }}</h3>
+            <ul>
+				<li><strong>{{ texte.li[0] }} :</strong>  {{ pilote.age }} {{ texte.li[1] }}</li>
+                <li><strong>{{ texte.li[2] }} :</strong> {{ pilote.pays }}</li>
+                <li><strong>{{ texte.li[3] }} :</strong> {{ pilote.podium }}</li>
+                <li><strong>{{ texte.li[4] }} :</strong> {{ pilote.champion }}</li>
+                <li><strong>{{ texte.li[5] }} :</strong> {{ pilote.date|date('d/m/Y') }}</li>
+            </ul>
+        </div>
+
+		<h3>{{ texte.h3[1] }}</h3>
+		<table>
+			{% for podium in pilote.dernierpodium %}
+				<tr>
+					<td>{{ podium.annee }}</td>
+					<td>{{ podium.lieu }}</td>
+					<td>{{ podium.place }}</td>
+				</tr>
+			{% endfor %}
+		</table>
+	</article>
+	{% endfor %}
+</div>
+{% endblock main %}

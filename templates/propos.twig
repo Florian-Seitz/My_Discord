@@ -1,0 +1,21 @@
+{% extends "base.twig" %}
+
+{% block main %}
+	<h2 class="title">{{ texte.h2 }}</h2>
+	<section class="cgu">
+		<p>{{ texte.p }}</p>
+
+		{% for par in texte.parts %}
+		<fieldset>
+			<legend>{{ par.legend }}</legend>
+			<p>{{ par.p }}</p>
+			<ul>
+				{% for li in par.li %}
+				<li>{{ li }}</li>
+				{% endfor %}
+			</ul>
+			<p>{{ par.p2 }}</p>
+		</fieldset>
+		{% endfor %}
+	</section>
+{% endblock main %}
