@@ -1,0 +1,83 @@
+/*---------- Page d'accueil -----------*/
+.banner {
+    background: linear-gradient(to right, #0000008f 0%, #0000008f 100%), url('../images/banner.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 100%;
+    z-index: 1;
+}
+
+.banner div {
+    margin: auto;
+    padding: 200px 0;
+    color: white;
+    width: 600px;
+}
+
+.banner h2 {
+    font-family: "Oxanium", serif;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.banner a {
+    background-color: #EE0000;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+.histoire, .citation {
+    padding: 0 70px;
+    margin-bottom: 50px;
+}
+
+.histoire h2, .citation h2 {
+    width: max-content;
+    margin: 20px;
+    color: #EE0000;
+}
+
+.classement {
+    background-color: #1C1C1C;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    color: #F3F3F3;
+}
+
+.classement h2 {
+    margin-bottom: 20px;
+}
+
+.classement > div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.classement > div > div {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    width: 45%;
+}
+
+.classement h3 {
+    font-size: 23px;
+    color: #F3F3F3;
+    padding: 5px;
+    border-bottom: 2px solid #EE0000;
+}
+
+.classement p {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.citation div {
+    justify-content: start;
+    align-items: center;
+    padding: 5px;
+}

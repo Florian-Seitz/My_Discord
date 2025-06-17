@@ -1,0 +1,36 @@
+/*------------- A propos --------------*/
+.cgu {
+    padding: 10px;
+}
+
+.cgu div {
+    border: 2px solid #424141;
+    border-radius: 10px;
+}
+
+.cgu fieldset {
+    border: 2px solid #424141;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.cgu legend {
+    color: #EE0000;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    margin: 0 20px;
+    padding: 0 3px;
+    font-size: 1.17em;
+}
+
+.cgu ul {
+    padding: 0 50px;
+}
+
+.cgu li {
+    list-style: square;
+}
+
+.cgu p {
+    margin: 10px;
+}

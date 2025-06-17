@@ -1,0 +1,103 @@
+/*-------------- Equipes --------------*/
+.equipe {
+    margin: 10px;
+    margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+}
+
+.equipe h2 {
+    margin: 20px 0;
+}
+
+.equipe h3 {
+    margin: 20px 0 10px 0;
+}
+
+.equipe ul {
+    list-style: none;
+    margin: 0;
+}
+
+.equipe p {
+    margin: 0 10px;
+}
+
+.equipe table {
+    height: 160px;
+}
+
+.equipe div {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.equipe div h3 {
+    width: 100%;
+}
+
+.equipe .parts {
+    width: 100%;
+    display: block;
+}
+
+.equipe > .parts:first-of-type {
+    border-right: 2px solid #424141;
+}
+
+.equipe > .parts:first-of-type img {
+    width: 250px;
+    border-radius: 8px 0;
+}
+
+.equipe > .parts:first-of-type ul {
+    padding: 10px;
+}
+
+.equipe .div-bg {
+    flex-wrap: wrap;
+}
+
+.div-bg ul {
+    width: 100%;
+    justify-content: start;
+}
+
+
+
+
+.equipe .parts:last-of-type div div {
+    width: 100%;
+    display: block;
+    flex-wrap: wrap;
+}
+
+.equipe .parts:last-of-type div div ul {
+    margin: 10px 20px;
+    padding: 10px;
+}
+
+.equipe .parts:last-of-type img {
+    border-radius: 0 8px;
+    margin: 0 0 15px 15px;
+}
+
+.equipe .parts:last-of-type > div:last-of-type {
+    border: 2px solid #424141;
+    border-radius: 10px;
+    margin: 5px;
+    flex-wrap: wrap;
+}
+
+.equipe > .parts:last-of-type > div:last-of-type ul {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    width: 100%;
+    padding: 0 50px;
+}
+
+.equipe img:first-of-type {
+    float: left;
+    margin: 0 10px 10px 0;
+}

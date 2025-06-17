@@ -1,0 +1,418 @@
+/*-------------- General --------------*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Oxanium", serif;
+    scroll-behavior: smooth;
+}
+
+html {
+    background-color: #d7d7d7;
+}
+
+body {
+    width: 1200px;
+    margin: auto;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.447);
+    background-color: #F3F3F3;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+div > h2 {
+    width: 100%;
+}
+
+h1 {
+    color: #EE0000;
+    font-style: italic;
+    margin: auto 0;
+    font-size: 45px;
+}
+
+h2, h3 {
+    font-family: "Oswald", sans-serif;
+    text-align: center;
+    width: 100%;
+}
+
+article {
+    border: 2px solid #424141;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.447);
+    margin: 20px 2px;
+    width: 350px;
+    margin-bottom: 50px;
+}
+
+article img {
+    width: 300px;
+    object-fit: cover;
+}
+
+p {
+    text-align: justify;
+}
+
+li {
+    list-style: none;
+    margin: 5px;
+}
+
+img {
+    width: 800px;
+    text-align: center;
+}
+
+main a {
+    color: #3b496c;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+main a:hover {
+    transform: scale(1.1);
+}
+
+
+/*---------- Classe commune -----------*/
+.title {
+    font-size: 23px;
+    padding: 5px 20px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #EE0000;
+    width: max-content;
+    padding-top: 120px;
+}
+
+.pilote img, .evolution img {
+    width: 100%;
+}
+
+.center {
+    text-align: center;
+}
+
+.div-bg {
+    background-color: #424141;
+    border: 2px solid #1C1C1C;
+    border-radius: 10px;
+    margin: 5px;
+    color: #F3F3F3;
+    padding: 5px 10px;
+}
+
+.div-bg h3 {
+    font-size: 23px;
+    color: #F3F3F3;
+    padding: 5px;
+    border-bottom: 2px solid #EE0000;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.div-bg li {
+    margin: 5px 0;
+}
+
+
+/*-------- Elements spécifique --------*/
+article a:hover {
+    text-decoration: underline;
+}
+
+main h3 {
+    color: #EE0000;
+}
+
+
+/*-------------- Header ---------------*/
+header {
+    width: 1200px;
+    border-radius: 0 0 5px 5px;
+    position: fixed;
+    z-index: 10;
+}
+
+header div {
+    background-color: #424141;
+    justify-content: start;
+}
+
+header img {
+    height: 60px;
+    width: auto;
+    margin: auto 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    border-radius: 0 0 5px 5px;
+}
+
+.main-nav {
+    background-color: #F3F3F3;
+    height: 45px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.447);
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+header li {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+    font-weight: bold;
+}
+
+header a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #424141;
+    width: max-content;
+    padding: 10px 30px;
+}
+
+header li:hover a {
+    border-bottom: #424141 3px solid;
+    transform: scale(1.1);
+}
+
+.sous-nav {
+    background-color: #424141;
+    margin: 0 10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.447);
+    display: none;
+}
+
+.sous-nav ul {
+    width: 1100px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px;
+}
+
+.sous-nav li {
+    list-style: none;
+    border: #424141 2px solid;
+    margin: 5px 0;
+}
+
+.sous-nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    color: #3b496c;
+    font-weight: bold;
+    width: 100px;
+}
+
+header:hover .sous-nav {
+    display: flex;
+}
+
+header .sous-nav li:hover a {
+    border-bottom: 0px;
+}
+
+header > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.langchoice img {
+    height: 20px;
+    margin-right: 5px;
+}
+
+.langchoice a {
+    color: white;
+}
+
+.langchoice ul {
+    position: absolute;
+    flex-direction: column;
+    top: +55px;
+    right: +10px;
+    background-color: #f3f3f3;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.447);
+    display: none;
+}
+
+.langchoice ul a {
+    color: #424141;
+}
+
+.langchoice a:hover {
+    transform: scale(1.1);
+    border-bottom: none;
+}
+
+.langchoice:hover ul {
+    display: flex;
+}
+
+
+/*-------------- Footer ---------------*/
+footer {
+    background-color: #424141;
+    border-radius: 5px 5px 0 0;
+    color: #F3F3F3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+footer h3 {
+    border-bottom: 2px solid #F3F3F3;
+}
+
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer li {
+    margin: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #F3F3F3;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.sitemap {
+    width: 300px;
+}
+
+
+/*-------------- Tableau --------------*/
+table {
+    padding: 0 5px 10px 5px;
+    gap: 0;
+    border-spacing: 0;
+    width: 100%;
+}
+
+tbody {
+    border: 2px solid #424141;
+}
+
+tr {
+    text-align: center;
+}
+
+td {
+    border: 1px solid #424141;
+}
+
+
+/*--------------- Aside ---------------*/
+aside {
+    border: #424141 2px solid;
+    background-color: #424141;
+    border-radius: 10px;
+    margin: 10px;
+    margin-top: 120px;
+}
+
+.asidediv {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.asidediv section {
+    width: 100%;
+}
+
+.asidediv article {
+    width: 100%;
+}
+
+aside h2 {
+    background-color: #F3F3F3;
+    border-radius: 8px 8px 0 0;
+}
+
+aside ul {
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+aside a {
+    font-size: 14px;
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    padding: 10px 4px;
+    width: 191px;
+}
+
+
+/*------------ Formulaire -------------*/
+form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #F3F3F3;
+    width: max-content;
+    background-color: #424141;
+    border-radius: 5px;
+    padding: 10px 40px;
+    margin: 30px auto;
+}
+y
+form input {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 500px;
+}
+
+form button {
+    background-color: #EE0000;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+    margin: 10px;
+    margin-bottom: 30px;
+    font-size: 1.2em;
+    width: 300px;
+}
+
+form button:hover {
+    transform: scale(1.1);
+}

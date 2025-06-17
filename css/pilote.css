@@ -1,0 +1,53 @@
+/*-------------- Pilotes --------------*/
+.pilote {
+    padding: 0;
+    width: 290px;
+}
+
+.pilote div {
+    border: 2px solid #424141;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.pilote h2 {
+    margin: 10px auto;
+    font-size: 30px;
+}
+
+.pilote h3 {
+    margin: 5px auto;
+    padding-top: 5px;
+}
+
+.pilote img {
+    border-radius: 8px 8px 0 0;
+}
+
+.pilote li {
+    list-style: none;
+}
+
+.pilote div:first-of-type {
+    border: none;
+}
+
+.pilote div p {
+    color: #EE0000;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium',  Arial, sans-serif;
+}
+
+.pilote div:first-of-type {
+    justify-content: space-around;
+}
+
+.pilotitle {
+    font-size: 23px;
+    padding: 5px 20px;
+    border-bottom: 2px solid #EE0000;
+    padding-top: 120px;
+    width: 100%;
+    margin: auto 450px;
+}

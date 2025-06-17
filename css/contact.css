@@ -1,0 +1,29 @@
+/*-------------- Contact --------------*/
+.contact {
+    background-color: #1C1C1C;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    color: #F3F3F3;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.contact > div {
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 45%;
+}
+
+.contact h3 {
+    color: #F3F3F3;
+    border-bottom: 2px solid #EE0000;
+}
+
+.contact p {
+    font-weight: bold;
+    margin: 10px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
